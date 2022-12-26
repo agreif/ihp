@@ -18,7 +18,7 @@ renderScript :: Text -> Text
 renderScript scriptName' = cs [plain|#!/usr/bin/env run-script
 module Application.Script.#{taskName} where
 
-import Application.Script.Prelude
+import Application.Script.Prelude hiding (run)
 
 run :: Script
 run = do
